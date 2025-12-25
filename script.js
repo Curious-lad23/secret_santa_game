@@ -52,6 +52,8 @@ function selectAnswer(index) {
 }
 
 function finishQuiz() {
+  console.log("Quiz finished. Score:", score);
+
   if (score >= 2) {
     document.getElementById("game").classList.add("hidden");
     document.getElementById("reward").classList.remove("hidden");
@@ -60,8 +62,10 @@ function finishQuiz() {
       "😅 Almost there! Try again.";
     currentQuestion = 0;
     score = 0;
+    showQuestion();
   }
 }
+
 
 function copyVoucher() {
   const text = document.getElementById("voucherCode").innerText.replace("🎫 ", "");
