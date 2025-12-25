@@ -81,3 +81,7 @@ function copyVoucher() {
   alert("Voucher code copied! 🎁");
 }
 
+function restartGame() {
+  document.getElementById("reward").classList.add("hidden");
+  document.getElementById("welcome").classList.remove("hidden");
+}
