@@ -1,19 +1,18 @@
-body {
-  margin: 0;
-  height: 100vh;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #c62828, #2e7d32);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #ffeb3b;
+  color: #333;
 }
 
-.card {
-  background: rgba(255, 255, 255, 0.15);
-  padding: 40px;
-  border-radius: 15px;
-  text-align: center;
-  color: white;
-  width: 320px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+button:hover {
+  background: #fff176;
+}
+
+.hidden {
+  display: none;
 }
