@@ -59,3 +59,9 @@ button:hover {
 .green {
   color: #00e676;
 }
+
+.options button {
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+}
