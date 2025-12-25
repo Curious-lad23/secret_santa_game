@@ -1,35 +1,65 @@
-let canClick = false;
-let timerStarted = false;
+let currentQuestion = 0;
+let score = 0;
+
+const questions = [
+  {
+    q: "🎅 What do people traditionally leave for Santa?",
+    options: ["Milk & Cookies", "Pizza", "Coffee", "Chocolate"],
+    answer: 0
+  },
+  {
+    q: "🎄 Which month is Christmas celebrated?",
+    options: ["November", "October", "December", "January"],
+    answer: 2
+  },
+  {
+    q: "🎁 What is Secret Santa mainly about?",
+    options: ["Winning prizes", "Surprising someone", "Office competition", "Shopping"],
+    answer: 1
+  }
+];
 
 function startGame() {
   document.getElementById("welcome").classList.add("hidden");
   document.getElementById("game").classList.remove("hidden");
-  document.getElementById("message").innerText = "";
-  document.getElementById("gift").classList.remove("green");
-
-  canClick = false;
-  timerStarted = true;
-
-  const delay = Math.random() * 2000 + 2000;
-
-  setTimeout(() => {
-    if (timerStarted) {
-      document.getElementById("gift").classList.add("green");
-      canClick = true;
-    }
-  }, delay);
+  currentQuestion = 0;
+  score = 0;
+  showQuestion();
 }
 
-function checkClick() {
-  if (!timerStarted) return;
+function showQuestion() {
+  const q = questions[currentQuestion];
+  document.getElementById("question").innerText = q.q;
 
-  if (canClick) {
-    document.getElementById("message").innerText =
-      "🎉 You win! Surprise unlocked!";
-  } else {
-    document.getElementById("message").innerText =
-      "❌ Too soon! Try again.";
+  const buttons = document.querySelectorAll(".options button");
+  buttons.forEach((btn, i) => {
+    btn.innerText = q.options[i];
+  });
+}
+
+function selectAnswer(index) {
+  if (index === questions[currentQuestion].answer) {
+    score++;
   }
 
-  timerStarted = false;
+  currentQuestion++;
+
+  if (currentQuestion < questions.length) {
+    showQuestion();
+  } else {
+    finishQuiz();
+  }
 }
+
+function finishQuiz() {
+  if (score >= 2) {
+    document.getElementById("game").classList.add("hidden");
+    document.getElementById("reward").classList.remove("hidden");
+  } else {
+    document.getElementById("quizMessage").innerText =
+      "😅 Almost there! Try again.";
+    currentQuestion = 0;
+    score = 0;
+  }
+}
+
