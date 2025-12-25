@@ -63,3 +63,9 @@ function finishQuiz() {
   }
 }
 
+function copyVoucher() {
+  const text = document.getElementById("voucherCode").innerText.replace("🎫 ", "");
+  navigator.clipboard.writeText(text);
+  alert("Voucher code copied! 🎁");
+}
+
