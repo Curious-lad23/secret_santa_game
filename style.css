@@ -65,3 +65,17 @@ button:hover {
   width: 100%;
   margin: 8px 0;
 }
+
+.voucher {
+  margin: 20px 0;
+  padding: 14px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.small {
+  font-size: 14px;
+  opacity: 0.9;
+}
