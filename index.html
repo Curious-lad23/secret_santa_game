@@ -18,11 +18,20 @@
   </div>
 
   <!-- Game Screen -->
-  <div class="card hidden" id="game">
-    <h2>🎮 Click the Gift When It Turns Green</h2>
-    <div id="gift" onclick="checkClick()">🎁</div>
-    <p id="message"></p>
+ <div class="card hidden" id="game">
+  <h2>🎄 Christmas Quiz</h2>
+
+  <div id="question"></div>
+
+  <div class="options">
+    <button onclick="selectAnswer(0)"></button>
+    <button onclick="selectAnswer(1)"></button>
+    <button onclick="selectAnswer(2)"></button>
+    <button onclick="selectAnswer(3)"></button>
   </div>
+
+  <p id="quizMessage"></p>
+</div>
 
 
   <script src="script.js"></script>
