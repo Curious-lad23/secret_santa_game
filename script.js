@@ -82,6 +82,18 @@ function copyVoucher() {
 }
 
 function restartGame() {
+  // Hide all screens
   document.getElementById("reward").classList.add("hidden");
+  document.getElementById("game").classList.add("hidden");
+
+  // Show welcome screen
   document.getElementById("welcome").classList.remove("hidden");
+
+  // Reset quiz state
+  currentQuestion = 0;
+  score = 0;
+
+  // Clear messages
+  document.getElementById("quizMessage").innerText = "";
 }
+
