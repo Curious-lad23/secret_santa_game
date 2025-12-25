@@ -57,6 +57,13 @@ function finishQuiz() {
   if (score >= 2) {
     document.getElementById("game").classList.add("hidden");
     document.getElementById("reward").classList.remove("hidden");
+
+    // 🎉 CONFETTI
+    confetti({
+      particleCount: 150,
+      spread: 70,
+      origin: { y: 0.6 }
+    });
   } else {
     document.getElementById("quizMessage").innerText =
       "😅 Almost there! Try again.";
@@ -65,6 +72,7 @@ function finishQuiz() {
     showQuestion();
   }
 }
+
 
 
 function copyVoucher() {
