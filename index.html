@@ -1,16 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>🎄 Secret Santa</title>
-  <link rel="stylesheet" href="style.css">
-</head>
 <body>
 
-  <div class="card">
+  <!-- Welcome Screen -->
+  <div class="card" id="welcome">
     <h1>🎅 Secret Santa Game</h1>
     <p>Win the challenge to unlock your surprise!</p>
+    <button onclick="startGame()">Start Game 🎮</button>
   </div>
 
+  <!-- Game Screen -->
+  <div class="card hidden" id="game">
+    <h2>🎯 Game Loading...</h2>
+    <p>Get ready!</p>
+  </div>
+
+  <script src="script.js"></script>
 </body>
-</html>
