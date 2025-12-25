@@ -1,6 +1,34 @@
+/* RESET */
+* {
+  box-sizing: border-box;
+}
+
+/* PAGE BACKGROUND */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #c62828, #2e7d32);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CARD */
+.card {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  color: white;
+  width: 320px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* BUTTON */
 button {
   margin-top: 20px;
-  padding: 10px 20px;
+  padding: 12px 24px;
   font-size: 16px;
   border: none;
   border-radius: 8px;
@@ -13,6 +41,7 @@ button:hover {
   background: #fff176;
 }
 
+/* HIDE SCREENS */
 .hidden {
   display: none;
 }
